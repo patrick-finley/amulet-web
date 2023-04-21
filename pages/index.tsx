@@ -15,7 +15,7 @@ export default function Home() {
   const [audioFile3, setAudioFile3] = useState<File | null>(null); // for the audio file
   const [audioFile4, setAudioFile4] = useState<File | null>(null); // for the audio file
   const [audioFile5, setAudioFile5] = useState<File | null>(null); // for the audio file
-  const [selectedFiles, setSelectedFiles] = useState<File | null>(null);
+  const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [query, setQuery] = useState(''); // for the prompt
   const [response, setResponse] = useState('');
 
@@ -34,22 +34,6 @@ export default function Home() {
       const name = 'audiofile${i+1}';
       formData.append(name, file);
     }
-    
-    // if (audioFile1 !== null) {
-    //   formData.append('audiofile1', audioFile1);
-    // }
-    // if (audioFile2 !== null) {
-    //   formData.append('audiofile2', audioFile2);
-    // }
-    // if (audioFile3 !== null) {
-    //   formData.append('audiofile3', audioFile3);
-    // }
-    // if (audioFile4 !== null) {
-    //   formData.append('audiofile4', audioFile4);
-    // }
-    // if (audioFile5 !== null) {
-    //   formData.append('audiofile5', audioFile5);
-    // }
 
     const response = await fetch('https://amulet-server.patrick-finley.repl.co/upload', {
       method: 'POST',
