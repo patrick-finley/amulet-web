@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
 
-  const [audioFile1, setAudioFile1] = useState<File | null>(null); // for the audio file
-  const [audioFile2, setAudioFile2] = useState<File | null>(null); // for the audio file
-  const [audioFile3, setAudioFile3] = useState<File | null>(null); // for the audio file
-  const [audioFile4, setAudioFile4] = useState<File | null>(null); // for the audio file
-  const [audioFile5, setAudioFile5] = useState<File | null>(null); // for the audio file
+  // const [audioFile1, setAudioFile1] = useState<File | null>(null); // for the audio file
+  // const [audioFile2, setAudioFile2] = useState<File | null>(null); // for the audio file
+  // const [audioFile3, setAudioFile3] = useState<File | null>(null); // for the audio file
+  // const [audioFile4, setAudioFile4] = useState<File | null>(null); // for the audio file
+  // const [audioFile5, setAudioFile5] = useState<File | null>(null); // for the audio file
   const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
   const [query, setQuery] = useState(''); // for the prompt
   const [response, setResponse] = useState('');
@@ -31,7 +31,7 @@ export default function Home() {
 
     for (let i = 0; i < selectedFiles.length; i++) {
       const file = selectedFiles[i];
-      const name = 'audiofile${i+1}';
+      const name = `audiofile${i+1}`; // ` not '
       formData.append(name, file);
     }
 
