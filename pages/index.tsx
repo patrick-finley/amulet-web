@@ -59,7 +59,7 @@ export default function Home() {
     setResponse(ans);
   }
   
-  const handleFileSelect = async (event: any) => {
+  const handleFileSelect = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault()
     
     const files = event.target.files;
@@ -72,7 +72,7 @@ export default function Home() {
     const newFilesArray = Array.from(files);
 
     const dataTransfer = new DataTransfer();
-    [...currentFilesArray, ...newFilesArray].forEach((file) => dataTransfer.items.add(file));
+    [...currentFilesArray, ...newFilesArray].forEach((file: File) => dataTransfer.items.add(file));
 
     setSelectedFiles(dataTransfer.files);
     // setSelectedFiles([...selectedFiles, ...files]);
