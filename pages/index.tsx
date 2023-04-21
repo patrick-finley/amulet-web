@@ -63,11 +63,19 @@ export default function Home() {
     event.preventDefault()
     
     const files = event.target.files;
-    if (files.length > 5) {
+    if (!files || files.length < 1 || files.length > 5) {
       alert("you can only upload up to 5 files idiot");
       return;
     }
-    setSelectedFiles([...selectedFiles, ...files]);
+
+    const currentFilesArray = selectedFiles ? Array.from(selectedFiles) : [];
+    const newFilesArray = Array.from(files);
+
+    const dataTransfer = new DataTransfer();
+    [...currentFilesArray, ...newFilesArray].forEach((file) => dataTransfer.items.add(file));
+
+    setSelectedFiles(dataTransfer.files);
+    // setSelectedFiles([...selectedFiles, ...files]);
   };
   
   return (
