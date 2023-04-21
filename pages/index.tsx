@@ -123,7 +123,7 @@ export default function Home() {
                   <label className="text-center text-lg font-bold text-white">
                     What is your query?
                   </label>
-                  <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="What did Will tell me earlier?" onChange={(e) => {setQuery(e.target.value)}} />
+                  <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="What did Will tell me earlier?" onChange={(e) => {setQuery(e.target.value)}} />
 
                   <button className="text-white relative flex cursor-pointer flex-row items-center gap-2 rounded-md border border-t3-purple-200/20 bg-t3-purple-100/10 px-2 py-2 text-sm transition-colors duration-300 hover:border-t3-purple-300/50 hover:bg-t3-purple-100/20 md:px-3 md:py-3 md:text-lg lg:px-5 lg:py-4 lg:text-xl" onClick={handleQuery}>Submit Query</button>
                 </form>
