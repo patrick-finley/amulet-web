@@ -24,7 +24,7 @@ export default function Home() {
 
     const formData = new FormData();
 
-    if (selectedFiles.length < 1) {
+    if (!selectedFiles || selectedFiles.length < 1) {
       alert("no selected files idiot");
       return;
     }
