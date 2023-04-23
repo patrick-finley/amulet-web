@@ -6,6 +6,8 @@ Then, you can submit a query that gets POSTed to [the backend](https://github.co
 
 <img width="1176" alt="Screenshot 2023-04-23 at 7 02 50 PM" src="https://user-images.githubusercontent.com/74550705/233870856-66e13c44-cb1b-4b78-928b-cc1ac579080c.png">
 
+<img width="1176" alt="Screenshot 2023-04-23 at 7 06 10 PM" src="https://user-images.githubusercontent.com/74550705/233870962-c5f5e341-5ada-4273-83b0-51149dd91e20.png">
+
 [Will](https://github.com/0hq) & I thought it would be cool to build a wearable device that records audio 24/7 that you could then use to have perfect memory-- recall details from conversations, summarize your week, etc. Could be really interesting for people with memory problems, anyone who takes meetings that needs perfect detail recall (similar to [Otter.ai](https://otter.ai) or [Rewind.ai](https://www.rewind.ai)), or even a sort of psychological tracking-- "how often was I irritable or sad this week?". Obvious privacy concerns exist, but there's maybe tractable ways around that like using an "XBOX record that" type feature so you can only save retro-actively, having a recording light, and doing all storage on-device so your transcripts aren't sent around.
 
 We thought about building a device, and bought an ESP32, but then realized [you can buy a device like what we were thinking on amazon](https://www.amazon.com/dp/B07F29M5TJ?psc=1&ref=ppx_yo2ov_dt_b_product_details) for testing purposes, so I bought one and recorded everything for about a week (with others' permission!) and tested this out.
