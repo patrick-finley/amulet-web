@@ -1,4 +1,4 @@
-## Amulet App -- query your audio data from an audio-recording necklace
+## Amulet App -- query your live conversations from an audio-recording necklace
 
 Takes in up to 5 mp3 audio files at a time, POSTs them to a Flask backend that processes them (remove silence, break up into chunks), transcribes (OpenAI Whisper) them, creates embeddings (OpenAI Ada), then uploads them to a vector database (Pinecone).
 
